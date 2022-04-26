@@ -1,0 +1,262 @@
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("./font/PlayfairDisplay-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Corinthia-Regular";
+    src: url("./font/Corinthia-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "ZillaSlabHighlight-Regular";
+    src: url("./font/ZillaSlabHighlight-Regular.ttf") format('truetype');
+}
+  
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#nav-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+#title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav-bar #title a h1{
+    margin: 10px;
+    font-family: "Corinthia-Regular";
+    font-size: 7vw;
+    color: #0e3b6b;
+}
+
+#menu-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-bar a{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: "ZillaSlabHighlight-Regular";
+    font-size: 1.8vw; 
+    font-weight: bold; 
+    color: #273646; 
+} 
+#menu-bar a:hover{ 
+    color: #495a6d;
+} 
+
+article{
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container-header {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+#text-box-header {
+    margin: 0px;
+    position: absolute;
+    text-align: center;    
+    width: 100%;
+    top: 50%
+}
+
+#text-box-header h2{
+    margin: 0px;
+    display: inline-block;
+    font-family: "PlayfairDisplay";
+    font-size: 4vw;
+    color: #FFFFFF; 
+}
+
+#img-header{
+    width: 100%;
+    display: block;
+    height: auto; 
+}
+
+
+#overlay{
+    background-color: rgba(255, 218, 196, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#titolo-articolo{
+    font-family: "PlayfairDisplay";
+    font-size: 2vw;
+}
+
+#lista-schede{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.scheda{
+    border: 3px solid #0e3b6b;
+    margin-bottom: 10px;
+    width: 70%;
+    height: auto;
+    background-color: #0e3b6b17;
+}
+.titolo-scheda{
+    font-family: "PlayfairDisplay";
+    font-size: 2vw;
+}
+.titolo-scheda, .contenuto-scheda p{
+    margin-left: 10px;
+}
+.img-scheda{
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(231, 99, 23);
+    color: #ffffff;
+}
+
+#div_spotify{
+    position: fixed;
+    z-index: 1;
+    right: 2%;
+    bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#div_spotify img{
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+
+#brani-spotify{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 10px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #1ed760;
+    margin-top: 70px;
+    padding-top: 8px;
+}
+
+.album{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album img{
+    width: 70%;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: inline;
+}
+
+.visible-flex{
+    display: flex;
+}
+
+@media(max-width: 820px) {
+    article {
+        width: 95%;
+    }
+    #nav-bar{
+        width: 95%;
+        margin: 5px;
+    }
+    #nav-bar #title h1{
+        font-size: 10vw;
+    }
+    #menu-bar a{
+        font-size: 4vw;
+    }
+    #text-box-header h2{
+        font-size: 5vw;
+    }
+    #titolo-articolo{
+        font-size: 3vw;
+    }
+    .titolo-scheda{
+        font-size: 4vw;
+    }
+    .img-scheda{
+        width: 80%;
+        position: relative;
+        left: 10%;
+    }
+}
+
+@media(max-width: 450px) {
+    #brani-spotify{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .album{
+        width: 60%;
+    }
+}
